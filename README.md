@@ -10,7 +10,7 @@ With Package, also known as `pkg`, you can easily install and update servers, pl
 
 After installing pkg, you can easily set up your first Minecraft Server by using the following command:
 
-pkg create-server pkg/paper my-server
+    pkg create-server pkg/paper my-server
 
 This command will use `pkg/paper` as template and download PaperMC using the latest version within seconds.
 
@@ -58,7 +58,7 @@ You can read more about writing constraints in our Version Constraints section.
 
 **Semver**: Semantic Versioning is a versioning scheme for using meaningful version numbers. It's a commonly used method by software developers.
 
-## Getting Started as Package Developer
+## Getting Started as Package Developer 🧑‍💻
 
 It's quite simple to get you package published and available for pkg, you just need to create a free account to register your vendor name. A vendor name is used to distinguish packages between multiple developers, for example.
 
@@ -86,7 +86,86 @@ Now since you having a rough understanding about using pkg, let's talk about wri
 
 Version constraints helps you to automatically select the right package version. They will be automatically resolved during an `require` or `update`.
 
-TBD
+### Exact Version Constraint
+
+You can specify the exact version of a package. This will tell Package to
+install this version and this version only. If other dependencies require
+a different version, the solver will ultimately fail and abort any install
+or update procedures.
+
+Example: `1.0.2`
+
+### Version Range
+
+By using comparison operators you can specify ranges of valid versions. Valid
+operators are `>`, `>=`, `<`, `<=`, `!=`.
+
+You can define multiple ranges. Ranges separated by a space (<code>&nbsp;</code>)
+or comma (`,`) will be treated as a **logical AND**. A double pipe (`||`)
+will be treated as a **logical OR**. AND has higher precedence than OR.
+
+> **Note:** Be careful when using unbounded ranges as you might end up
+> unexpectedly installing versions that break backwards compatibility.
+> Consider using the [caret](#caret-version-range) operator instead for safety.
+
+Examples:
+
+* `>=1.0`
+* `>=1.0 <2.0`
+* `>=1.0 <1.1 || >=1.2`
+
+### Hyphenated Version Range (` - `)
+
+Inclusive set of versions. Partial versions on the right include are completed
+with a wildcard. For example `1.0 - 2.0` is equivalent to `>=1.0.0 <2.1` as the
+`2.0` becomes `2.0.*`. On the other hand `1.0.0 - 2.1.0` is equivalent to
+`>=1.0.0 <=2.1.0`.
+
+Example: `1.0 - 2.0`
+
+### Wildcard Version Range (`.*`)
+
+You can specify a pattern with a `*` wildcard. `1.0.*` is the equivalent of
+`>=1.0 <1.1`.
+
+Example: `1.0.*`
+
+## Next Significant Release Operators
+
+### Tilde Version Range (`~`)
+
+The `~` operator is best explained by example: `~1.2` is equivalent to
+`>=1.2 <2.0.0`, while `~1.2.3` is equivalent to `>=1.2.3 <1.3.0`. As you can see
+it is mostly useful for projects respecting [semantic
+versioning](https://semver.org/). A common usage would be to mark the minimum
+minor version you depend on, like `~1.2` (which allows anything up to, but not
+including, 2.0). Since in theory there should be no backwards compatibility
+breaks until 2.0, that works well. Another way of looking at it is that using
+`~` specifies a minimum version, but allows the last digit specified to go up.
+
+Example: `~1.2`
+
+> **Note:** Although `2.0-beta.1` is strictly before `2.0`, a version constraint
+> like `~1.2` would not install it. As said above `~1.2` only means the `.2`
+> can change but the `1.` part is fixed.
+
+> **Note:** The `~` operator has an exception on its behavior for the major
+> release number. This means for example that `~1` is the same as `~1.0` as
+> it will not allow the major number to increase trying to keep backwards
+> compatibility.
+
+### Caret Version Range (`^`)
+
+The `^` operator behaves very similarly, but it sticks closer to semantic
+versioning, and will always allow non-breaking updates. For example `^1.2.3`
+is equivalent to `>=1.2.3 <2.0.0` as none of the releases until 2.0 should
+break backwards compatibility. For pre-1.0 versions it also acts with safety
+in mind and treats `^0.3` as `>=0.3.0 <0.4.0`.
+
+This is the recommended operator for maximum interoperability when writing
+library code.
+
+Example: `^1.2.3`
 
 ## Private Packages 😶‍🌫️
 
@@ -94,4 +173,8 @@ Currently in private-beta, we're experimenting with private packages. Private Pa
 
 There is no special setup required to create private packages. The permission management is done within the package settings page.
 
+## License 🧑‍⚖️
 
+Package, also known as pkg, and all content on this repository are released under the [MIT license](LICENSE).
+
+To explain version constraints, we used the docs from [Composer](https://getcomposer.org/doc/articles/versions.md).
