@@ -1,11 +1,9 @@
 # pkg 📦
 
-<p align="center">
-  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/dt/mcpkg-io/pkg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/v/mcpkg-io/pkg" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/l/mcpkg-io/pkg" alt="License"></a>
-  <a href="https://discord.gg/qsxVMNg"><img src="https://discordapp.com/api/guilds/552952675369484301/embed.png?style=shield" alt="Discord"></a>
-</p>
+<a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/dt/mcpkg-io/pkg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/v/mcpkg-io/pkg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/l/mcpkg-io/pkg" alt="License"></a>
+<a href="https://discord.gg/qsxVMNg"><img src="https://discordapp.com/api/guilds/552952675369484301/embed.png?style=shield" alt="Discord"></a>
 
 A Package Manager for Minecraft
 
