@@ -173,6 +173,16 @@ Currently in private-beta, we're experimenting with private packages. Private Pa
 
 There is no special setup required to create private packages. The permission management is done within the package settings page.
 
+## Contributing 🧙
+
+If you want to contribute to this project, please feel free to create any pull request, but please consider reading our contribution guidelines first.
+
+## Server Integrations 🔌
+
+Currently we're still busy creating the core cli application, including the website, but we've already planned an plugin integration for Minecraft servers bringing `/pkg` available as in-game command.
+
+The plugin itself wraps the cli command and bringing some additional quality of life tools, like in-game plugin reloading.
+
 ## License 🧑‍⚖️
 
 Package, also known as pkg, and all content on this repository are released under the [MIT license](LICENSE).
