@@ -2,7 +2,7 @@
 
 A Package Manager for Minecraft
 
-Introduction
+## Introduction
 
 With Package, also known as `pkg`, you can easily install and update servers, plugins, maps and even complete pre-configured servers just by using the `pkg` command. It does not require any technical knowledge.
 
