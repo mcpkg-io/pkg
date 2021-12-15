@@ -1,10 +1,25 @@
 # pkg 📦
 
+<p align="center">
+  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/dt/mcpkg-io/pkg" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/v/mcpkg-io/pkg" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/mcpkg-io/pkg"><img src="https://img.shields.io/packagist/l/mcpkg-io/pkg" alt="License"></a>
+  <a href="https://discord.gg/qsxVMNg"><img src="https://discordapp.com/api/guilds/552952675369484301/embed.png?style=shield" alt="Discord"></a>
+</p>
+
 A Package Manager for Minecraft
 
-## Introduction
+## Introduction 🦄
 
 With Package, also known as `pkg`, you can easily install and update servers, plugins, maps and even complete pre-configured servers just by using the `pkg` command. It does not require any technical knowledge.
+
+<p align="center">
+  <img src="demo.gif">
+</p>
+
+Built to be jusT cOol 😎!
+
+> If you think so, support us with a `star` and a `follow` 😘
 
 ## Usage 🎉
 
