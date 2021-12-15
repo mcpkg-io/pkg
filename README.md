@@ -37,13 +37,13 @@ Tip: Checkout our [GitHub Action](https://github.com/mcpkg-io/pkg-action) for CI
 
 ## Install on Windows 🛸
 
-On Windows, it's a little bit more work to get pkg's imstall requirements installed. You can use our Windows Installation Guide, if you're already installed Composer successful, you can run:
+On Windows, it's a little bit more work to get pkg's install requirements installed. You can use our Windows Installation Guide, if you're already installed Composer successful, you can run:
 
     composer global require mcpkg-io/pkg
 
 ## Finding Packages 🔍
 
-> At the moment, we're quite new, so there are not much content published using pkg, but you can increase this by making plugin developers aware of this project.
+> At the moment, we're quite new, so there is not much content published using pkg, but you can increase this by making plugin developers aware of this project.
 
 You will the most of packages, which are available for pkg, at our official [mcpkg.io](https://www.mcpkg.io/) website, or by using the instructions from the package vendor.
 
